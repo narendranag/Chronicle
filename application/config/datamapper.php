@@ -16,12 +16,12 @@ $config['local_time'] = FALSE;
 $config['unix_timestamp'] = FALSE;
 $config['auto_transaction'] = FALSE;
 $config['auto_populate_has_many'] = FALSE;
-$config['auto_populate_has_one'] = FALSE;
+$config['auto_populate_has_one'] = TRUE;
 $config['all_array_uses_ids'] = FALSE;
 // Uncomment to enable the production cache
 // $config['production_cache'] = 'datamapper/cache';
 $config['extensions_path'] = 'datamapper';
-$config['extensions'] = array();
+$config['extensions'] = array("array");
 
 /* End of file datamapper.php */
 /* Location: ./application/config/datamapper.php */

@@ -15,8 +15,8 @@
 |
 */
 
-$config['DX_website_name'] = 'Your Website';
-$config['DX_webmaster_email'] = 'webmaster@yourhost.com';
+$config['DX_website_name'] = 'chronicle.localhost';
+$config['DX_webmaster_email'] = 'webmaster@localhost.com';
 
 /*
 |--------------------------------------------------------------------------
