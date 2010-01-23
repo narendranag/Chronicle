@@ -1,0 +1,112 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+	"http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+
+<head>
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8">
+	<title>Chronicle :: Edit Post</title>
+	
+	<!-- Framework CSS -->
+	<link rel="stylesheet" href="resources/css/screen.css" type="text/css" media="screen, projection">
+	<link rel="stylesheet" href="resources/css/print.css" type="text/css" media="print">
+	<!--[if lt IE 8]><link rel="stylesheet" href="/resources/css/ie.css" type="text/css" media="screen, projection"><![endif]-->
+	
+	<script src="resources/scripts/jquery-1.3.2.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="resources/scripts/chronicle.js" type="text/javascript" charset="utf-8"></script>
+	
+	<style type="text/css" media="screen">
+		
+		body {
+			background: #ccc;
+			width: 950px;
+			margin: 0 auto;
+		}
+		
+		.chronicle {
+			font-size: 1em;
+			color: #eee;
+			width: 930px;
+			background: #999;
+			padding: 5px 10px;
+			-moz-box-shadow: 0px 0px 4px #444;
+		}
+		
+		.container {
+			margin: 2em auto;
+			width: 950px;
+			-moz-box-shadow: 0px 0px 10px #666;
+			background: #fff;
+		}
+		
+		.credits {
+			float: right;
+			font-size: .7em;
+			color: #666;
+			padding-right: 10px;
+		}
+			.credits a {
+				color: #666;
+				padding: 0;
+			}
+	</style>
+</head>
+
+<body id="list">
+	
+
+
+<div class="container"><form>
+
+	<div class="chronicle alt">
+		Narendra Nag's Chronicle
+	</div>
+
+	<div class="prepend-top prepend-2 span-21 append-1 last">
+		<h3>Edit Post</h3>
+	</div>
+	
+	<div class="prepend-2 span-15">
+		
+		<p>
+		<input type="text" name="title" value="" id="title" class="title span-15">
+		</p>
+	
+		<p>
+		<textarea name="body" id="body" class="span-15"></textarea>
+		</p>
+		
+		<p>
+		<button type="submit" class="button positive" id="save">
+		  <img src="resources/icons/tick.png" alt=""/> Save
+		</button>
+		
+		<button type="submit" class="button positive" id="save">
+		  <img src="resources/icons/external.png" alt=""/> Publish
+		</button>
+		
+		</p>
+	</div>
+	
+	<div class="span-5 append-2 last">
+		<p>
+		<select name="category_id" id="category_id" size="1" class="span-5">
+			<option value="0">Choose Category</option>
+		</select>
+		</p>
+
+		<p>
+		<label for="new_category">New Category</label><br/>
+		<input type="text" name="new_category" value="" id="new_category" class="span-5">
+		</p>
+	</div>
+	
+	<hr class="space" />
+	
+	
+</form></div>
+
+<div class="credits">
+	<a href="http://www.github.com/narendranag/Chronicle">Chronicle</a> by <a href="http://www.narendranag.com">Narendra Nag</a> | Built using <a href="http://www.codeigniter.com">CodeIgniter</a> <a href="http://www.jquery.org">jQuery</a> <a href="http://www.blueprintcss.org">Blueprint</a>
+</div>
+
+
+</body>
