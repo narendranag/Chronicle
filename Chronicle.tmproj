@@ -18,9 +18,19 @@
 		</dict>
 		<dict>
 			<key>filename</key>
-			<string>index.php</string>
+			<string>template.html</string>
+			<key>lastUsed</key>
+			<date>2010-01-24T06:24:08Z</date>
 		</dict>
 		<dict>
+			<key>filename</key>
+			<string>index.php</string>
+			<key>lastUsed</key>
+			<date>2010-01-23T19:28:03Z</date>
+		</dict>
+		<dict>
+			<key>expanded</key>
+			<true/>
 			<key>name</key>
 			<string>resources</string>
 			<key>regexFolderFilter</key>
@@ -44,18 +54,48 @@
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>0</integer>
+				<integer>18</integer>
 				<key>line</key>
-				<integer>159</integer>
+				<integer>84</integer>
 			</dict>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
 			<key>firstVisibleLine</key>
-			<integer>139</integer>
+			<integer>98</integer>
+		</dict>
+		<key>resources/scripts/chronicle.js</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>34</integer>
+				<key>line</key>
+				<integer>42</integer>
+			</dict>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>216</integer>
+		</dict>
+		<key>template.html</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>1</integer>
+				<key>line</key>
+				<integer>105</integer>
+			</dict>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>0</integer>
 		</dict>
 	</dict>
 	<key>openDocuments</key>
 	<array>
+		<string>template.html</string>
+		<string>resources/scripts/chronicle.js</string>
 		<string>application/controllers/chronicle.php</string>
 	</array>
 	<key>showFileHierarchyDrawer</key>
@@ -75,7 +115,21 @@
 					<key>subItems</key>
 					<dict/>
 				</dict>
+				<key>views</key>
+				<dict>
+					<key>isExpanded</key>
+					<true/>
+					<key>subItems</key>
+					<dict/>
+				</dict>
 			</dict>
+		</dict>
+		<key>resources</key>
+		<dict>
+			<key>isExpanded</key>
+			<true/>
+			<key>subItems</key>
+			<dict/>
 		</dict>
 	</dict>
 	<key>windowFrame</key>

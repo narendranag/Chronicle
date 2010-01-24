@@ -3,7 +3,7 @@
 
 <head>
 	<meta http-equiv="Content-type" content="text/html; charset=utf-8">
-	<title>Chronicle :: Edit Post</title>
+	<title>Chronicle :: Template</title>
 	
 	<!-- Framework CSS -->
 	<link rel="stylesheet" href="resources/css/screen.css" type="text/css" media="screen, projection">
@@ -24,29 +24,95 @@
 		.chronicle {
 			font-size: 1em;
 			color: #eee;
-			width: 930px;
 			background: #999;
-			padding: 5px 10px;
+			padding: .5em 1em;
 			-moz-box-shadow: 0px 0px 4px #444;
+			margin-left: -1em;
+			margin-bottom: 3em;
 		}
+			.chronicle a {
+				float: right;
+				color: #eee;
+				text-decoration: none;
+				padding: 0 1em;
+			}
+			
+			.chronicle a:hover { color: #fff; }
 		
 		.container {
 			margin: 2em auto;
-			width: 950px;
 			-moz-box-shadow: 0px 0px 10px #666;
-			background: #fff;
+			padding-bottom: 2em;
 		}
 		
 		.credits {
 			float: right;
 			font-size: .7em;
 			color: #666;
-			padding-right: 10px;
+			padding-right: 1em;
 		}
 			.credits a {
 				color: #666;
 				padding: 0;
 			}
+			
+		.white {
+			background: #fff;
+		}
+		
+		.gray {
+			background: #ccc;
+		}
+		
+		category { 
+			
+			margin-left: -8em;
+			width: 5.5em;
+			float: left;
+			background: #222; 
+			color: #eee; 
+			padding: .5em; 
+			text-align: center;
+			-moz-box-shadow: -3px 0px 5px #444;
+		}
+		
+		
+		date {
+			float: left;
+			
+			margin-left: -8em;
+			width: 4.5em;
+			text-align: center;
+			-moz-box-shadow: -3px 0px 5px #444;
+			padding: 1em;
+			background: #eee;
+		}
+		
+		#post date { margin-top: 7em; }
+		#post category { margin-top: 4.5em; }
+		
+		#list category {margin-top: .5em;}
+		#list date{ margin-top: 3em;}
+		
+		month, day, year {
+			display: block;
+			line-height: 1em;
+			font-weight: 700;
+			color: #777;
+		}
+		
+		month, year { font-size: 1em; }
+		
+		day { font-size: 3em; }
+		
+		author, post {display: block;}
+		
+		author { font-weight: 500; margin-bottom: 1em;}
+		
+		post, extract {display: block;}
+		
+		extract { padding-bottom: 1.5em; margin-bottom: 1.5em; border-bottom: 1px dotted #ccc;}
+		
 	</style>
 </head>
 
@@ -54,16 +120,72 @@
 	
 
 
-<div class="container"><form>
+<div class="container white">
+	
 
-	<div class="chronicle alt">
+
+	<div class="span-24 last chronicle alt">
 		Narendra Nag's Chronicle
+		<a href="#login" rel="facebox">Sign In</a>
 	</div>
+
+	<div id="list">
+
+		<div class="prepend-1 span-22 append-1">
+			<category>Technology</category>
+			<date><month>Jan</month><day>21</day><year>2010</year></date>
+
+			<h1>Headline</h1>
+
+
+
+			<author>Narendra Nag</author>
+
+			<extract>
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+			</extract>
+			
+			
+			
+			<category>Technology</category>
+			<date><month>Jan</month><day>21</day><year>2010</year></date>
+
+			<h1>Headline</h1>
+
+
+
+			<author>Narendra Nag</author>
+
+			<extract>
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+			</extract>
+			
+
+		</div>
+
+	</div>
+
+</div>
+
+<div class="credits">
+	<a href="http://www.github.com/narendranag/Chronicle">Chronicle</a> by <a href="http://www.narendranag.com">Narendra Nag</a> | Built using <a href="http://www.codeigniter.com">CodeIgniter</a> <a href="http://www.jquery.org">jQuery</a> <a href="http://www.blueprintcss.org">Blueprint</a>
+</div>
+
+
+
+<div id="edit" class="hide">
 
 	<div class="prepend-top prepend-2 span-21 append-1 last">
 		<h3>Edit Post</h3>
 	</div>
-	
+
+
+
+	<form>	
 	<div class="prepend-2 span-15">
 		
 		<p>
@@ -100,13 +222,32 @@
 	</div>
 	
 	<hr class="space" />
-	
-	
-</form></div>
+		
+	</form>
 
-<div class="credits">
-	<a href="http://www.github.com/narendranag/Chronicle">Chronicle</a> by <a href="http://www.narendranag.com">Narendra Nag</a> | Built using <a href="http://www.codeigniter.com">CodeIgniter</a> <a href="http://www.jquery.org">jQuery</a> <a href="http://www.blueprintcss.org">Blueprint</a>
 </div>
 
 
+<div id="post" class="hide">
+		
+	<div class="prepend-1 span-22 append-1">
+		<category>Technology</category>
+		<date><month>Jan</month><day>21</day><year>2010</year></date>
+		
+		<h1>Headline</h1>
+		
+		
+		
+		<author>Narendra Nag</author>
+		
+		<post>
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+			
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+		</post>
+		
+		
+	</div>
+
+</div>
 </body>
