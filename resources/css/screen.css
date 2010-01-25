@@ -368,8 +368,8 @@ body a.noicon {
 	margin:0 !important; 
 }
 
-/* Make sure the /resources/icons are not cut */
-a[href^="http:"], a[href^="mailto:"], a[href^="http:"]:visited, 
+/* Make sure the /resources/icons are not cut  a[href^="http:"],  */
+a[href^="mailto:"], a[href^="http:"]:visited, 
 a[href$=".pdf"], a[href$=".doc"], a[href$=".xls"], a[href$=".rss"], 
 a[href$=".rdf"], a[href^="aim:"] {
   padding:2px 22px 2px 0;
@@ -378,10 +378,11 @@ a[href$=".rdf"], a[href^="aim:"] {
   background-position: right center;
 }
 
-/* External links */
+/* External links 
 a[href^="http:"]          { background-image: url(/resources/icons/external.png); } 
+a[href^="http:"]:visited  { background-image: url(/resources/icons/visited.png); } */
 a[href^="mailto:"]        { background-image: url(/resources/icons/email.png); }
-a[href^="http:"]:visited  { background-image: url(/resources/icons/visited.png); }
+
 
 /* Files */
 a[href$=".pdf"]   { background-image: url(/resources/icons/pdf.png); }  

@@ -15,8 +15,8 @@
 |
 */
 
-$config['DX_website_name'] = 'chronicle.localhost';
-$config['DX_webmaster_email'] = 'webmaster@localhost.com';
+$config['DX_website_name'] = "Narendra Nag's Chronicle";
+$config['DX_webmaster_email'] = 'narendranag@gmail.com';
 
 /*
 |--------------------------------------------------------------------------
@@ -206,7 +206,7 @@ $config['DX_reset_password_uri'] = '/auth/reset_password/';
 */
 
 // Registration
-$config['DX_allow_registration'] = TRUE; 
+$config['DX_allow_registration'] = FALSE; 
 $config['DX_captcha_registration'] = TRUE;
 
 // Login

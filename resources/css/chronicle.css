@@ -1,0 +1,96 @@
+	body {
+		background: #ccc;
+		width: 950px;
+		margin: 0 auto;
+	}
+	
+	.chronicle {
+		font-size: 1em;
+		color: #eee;
+		background: #999;
+		padding: .5em 1em;
+		-moz-box-shadow: 0px 0px 4px #444;
+		margin-left: -1em;
+		margin-bottom: 3em;
+	}
+		.chronicle a {
+			float: right;
+			color: #eee;
+			text-decoration: none;
+			padding: 0 1em;
+		}
+		
+		.chronicle a:hover { color: #fff; }
+	
+	.container {
+		margin: 2em auto;
+		-moz-box-shadow: 0px 0px 10px #666;
+		padding-bottom: 2em;
+	}
+	
+	.credits {
+		float: right;
+		font-size: .7em;
+		color: #666;
+		padding-right: 1em;
+	}
+		.credits a {
+			color: #666;
+		}
+		
+	.white {
+		background: #fff;
+	}
+	
+	.gray {
+		background: #ccc;
+	}
+	
+	category { 
+		
+		margin-left: -8em;
+		width: 5.5em;
+		float: left;
+		background: #222; 
+		color: #eee; 
+		padding: .5em; 
+		text-align: center;
+		-moz-box-shadow: -3px 0px 5px #444;
+	}
+	
+	
+	date {
+		float: left;
+		
+		margin-left: -8em;
+		width: 4.5em;
+		text-align: center;
+		-moz-box-shadow: -3px 0px 5px #444;
+		padding: 1em;
+		background: #eee;
+	}
+	
+	#post date { margin-top: 7em; }
+	#post category { margin-top: 4.5em; }
+	
+	#list category {margin-top: .5em;}
+	#list date{ margin-top: 3em;}
+	
+	month, day, year {
+		display: block;
+		line-height: 1em;
+		font-weight: 700;
+		color: #777;
+	}
+	
+	month, year { font-size: 1em; }
+	
+	day { font-size: 3em; }
+	
+	author, post {display: block;}
+	
+	author { font-weight: 500; margin-bottom: 1em;}
+	
+	post, extract {display: block;}
+	
+	extract { padding-bottom: 1.5em; margin-bottom: 1.5em; border-bottom: 1px dotted #ccc;}

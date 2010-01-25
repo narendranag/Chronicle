@@ -11,9 +11,9 @@
 
 class Chronicle extends Controller {
 	
-	const $_UNSAVED = 0;
-	const $_DRAFT = 1;
-	const $_PUBLISHED = 2;
+	var $_UNSAVED = 0;
+	var $_DRAFT = 1;
+	var $_PUBLISHED = 2;
 	
 	
 	/*
@@ -22,9 +22,13 @@ class Chronicle extends Controller {
 	*/
 	
 	
-	function index($url) {
+	function index() {
+		$this->latest();
+	}
+	
+	function view($url = NULL) {
 		
-		if(!isset($url))
+		if(! isset($url))
 			redirect("chronicle/latest");
 		
 		$data = $this->_get($url);
@@ -32,9 +36,40 @@ class Chronicle extends Controller {
 		if($data["error"])
 			show_404($url);
 		else
-			$this->load->view("show", $data);
+			$this->load->view("chronicle/view", $data);
 	}
 	
+	
+	function edit($url = NULL)
+	{
+		$this->load->helper('form');
+		
+		if(! $this->dx_auth->is_logged_in())
+		{
+			redirect("auth/login");
+		}
+		
+		if(isset($url))
+			$data = $this->_get($url);
+		else
+		{
+			$data["id"] = 0;
+			$data["status"] = $this->_UNSAVED;
+			$data["title"] = "";
+			$data["body"] = "";
+			$data["category_id"] = 0;
+			$data["error"] = FALSE;
+		}
+		
+		$categoryObject = new Category;
+		$categoryObject->order_by("name")->get();
+		$data["categories"][0] = "New Category";
+		foreach($categoryObject->all as $cat)
+			$data["categories"][$cat->id] = $cat->name;
+		
+		$this->load->view("chronicle/edit", $data);
+		
+	}
 	
 	
 	/*
@@ -57,7 +92,7 @@ class Chronicle extends Controller {
 		$postObject = new Post;
 		
 		if(! $this->dx_auth->is_logged_in() )
-			$postObject->where("status", $_PUBLISHED);
+			$postObject->where("status", $this->_PUBLISHED);
 		else if($this->input->post("status"))
 			$postObject->where("status", $this->input->post("status"));
 			
@@ -66,8 +101,18 @@ class Chronicle extends Controller {
 		if($postObject->exists())
 		{
 			$data = $postObject->to_array();
+			
+			if($postObject->status == $this->_PUBLISHED)
+				$date = $postObject->published;
+			else
+				$date = $postObject->updated;
+			
+			$data["day"] = date("d", strtotime($date));
+			$data["month"] = date("M", strtotime($date));
+			$data["year"] = date("Y", strtotime($date));
+			
 			$data["author"] = $postObject->author->name();
-			$data["category"] = $postObject->category->name;
+			$data["category"] = ($postObject->category_id > 0) ? $postObject->category->name : "";
 			$data["error"] = FALSE;
 		}
 		else
@@ -100,14 +145,14 @@ class Chronicle extends Controller {
 		
 		// Title & Text
 		
-		$postObject->title = $this->input->post("title", TRUE);
+		$postObject->title = trim($this->input->post("title", TRUE));
 		$postObject->body = $this->input->post("body", TRUE);
 		
 		// Unique SEO Friendly URL
 		
 		if($id == 0)
 		{
-			$base_url = url_title($title);
+			$base_url = url_title(strtolower($postObject->title));
 			$url = $base_url;
 			$counter = 2;
 
@@ -115,7 +160,7 @@ class Chronicle extends Controller {
 				$query = $this->db->where("url", $url)->from("posts")->get();
 				if($query->num_rows() > 0)
 					$url = $base_url . "_" . $counter++;
-			} while($query->num_rows() > 0)
+			} while($query->num_rows() > 0);
 
 			$postObject->url = $url;
 		}
@@ -143,8 +188,8 @@ class Chronicle extends Controller {
 		
 		// Status & Publishing Date
 		
-		if($postObject->status < $_PUBLISHED && $this->input->post("status") == $_PUBLISHED)
-			$postObject->published = date("Y-m-d H:i:s", now())
+		if($postObject->status < $this->_PUBLISHED && $this->input->post("status") == $this->_PUBLISHED)
+			$postObject->published = date("Y-m-d H:i:s", time());
 		
 		$postObject->status = $this->input->post("status");
 		
@@ -154,9 +199,7 @@ class Chronicle extends Controller {
 		
 		// Return the post data
 		
-		$data = $this->_get($postObject->url);
-
-		echo json_encode($data);
+		redirect("chronicle/view/$postObject->url");
 
 	}
 	
@@ -164,16 +207,25 @@ class Chronicle extends Controller {
 	function latest($page_number = 0)
 	{
 		
+		
 		$limit = 10;
 		$offset = $page_number * $limit;
 		
 		$postObject = new Post;
 		
-		$postObject->where("status", $_PUBLISHED)->order_by("published DESC")->limit($offset, $limit)->get();
+		$postObject->where("status", $this->_PUBLISHED)->order_by("published DESC")->limit($limit, $offset)->get();
 		
-		$data = $postObject->all_to_array();
+		foreach($postObject->all as $post)
+		{
+			$data["posts"][$post->id]["category"] = ($post->category_id > 0) ? $post->category->name : "";
+			$data["posts"][$post->id]["title"] = $post->title;
+			$data["posts"][$post->id]["published"] = $post->published;
+			$data["posts"][$post->id]["author"] = $post->author->name();
+			$data["posts"][$post->id]["body"] = $post->body;
+			$data["posts"][$post->id]["url"] = $post->url;
+		}
 		
-		$this->load->view("list", $data);
+		$this->load->view("chronicle/list", $data);
 	}
 	
 }

@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>currentDocument</key>
-	<string>application/controllers/chronicle.php</string>
+	<string>template.html</string>
 	<key>documents</key>
 	<array>
 		<dict>
@@ -20,7 +20,9 @@
 			<key>filename</key>
 			<string>template.html</string>
 			<key>lastUsed</key>
-			<date>2010-01-24T06:24:08Z</date>
+			<date>2010-01-24T08:29:08Z</date>
+			<key>selected</key>
+			<true/>
 		</dict>
 		<dict>
 			<key>filename</key>
@@ -61,30 +63,16 @@
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
 			<key>firstVisibleLine</key>
-			<integer>98</integer>
-		</dict>
-		<key>resources/scripts/chronicle.js</key>
-		<dict>
-			<key>caret</key>
-			<dict>
-				<key>column</key>
-				<integer>34</integer>
-				<key>line</key>
-				<integer>42</integer>
-			</dict>
-			<key>firstVisibleColumn</key>
-			<integer>0</integer>
-			<key>firstVisibleLine</key>
-			<integer>216</integer>
+			<integer>63</integer>
 		</dict>
 		<key>template.html</key>
 		<dict>
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>1</integer>
+				<integer>39</integer>
 				<key>line</key>
-				<integer>105</integer>
+				<integer>13</integer>
 			</dict>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
@@ -95,7 +83,6 @@
 	<key>openDocuments</key>
 	<array>
 		<string>template.html</string>
-		<string>resources/scripts/chronicle.js</string>
 		<string>application/controllers/chronicle.php</string>
 	</array>
 	<key>showFileHierarchyDrawer</key>
@@ -107,15 +94,15 @@
 			<key>isExpanded</key>
 			<true/>
 			<key>subItems</key>
+			<dict/>
+		</dict>
+		<key>resources</key>
+		<dict>
+			<key>isExpanded</key>
+			<true/>
+			<key>subItems</key>
 			<dict>
-				<key>controllers</key>
-				<dict>
-					<key>isExpanded</key>
-					<true/>
-					<key>subItems</key>
-					<dict/>
-				</dict>
-				<key>views</key>
+				<key>scripts</key>
 				<dict>
 					<key>isExpanded</key>
 					<true/>
@@ -123,13 +110,6 @@
 					<dict/>
 				</dict>
 			</dict>
-		</dict>
-		<key>resources</key>
-		<dict>
-			<key>isExpanded</key>
-			<true/>
-			<key>subItems</key>
-			<dict/>
 		</dict>
 	</dict>
 	<key>windowFrame</key>

@@ -5,7 +5,7 @@ class Post extends Datamapper {
 	var $has_one = array(
 										"author" => array(
 											"class" => "user",
-											"other_field" => "authored_posts"),
+											"other_field" => "posts"),
 											
 										"category" => array(
 											"class" => "category",
