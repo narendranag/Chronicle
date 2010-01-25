@@ -2,8 +2,6 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>currentDocument</key>
-	<string>template.html</string>
 	<key>documents</key>
 	<array>
 		<dict>
@@ -20,9 +18,7 @@
 			<key>filename</key>
 			<string>template.html</string>
 			<key>lastUsed</key>
-			<date>2010-01-24T08:29:08Z</date>
-			<key>selected</key>
-			<true/>
+			<date>2010-01-25T05:19:34Z</date>
 		</dict>
 		<dict>
 			<key>filename</key>
@@ -50,41 +46,7 @@
 	<key>fileHierarchyDrawerWidth</key>
 	<integer>231</integer>
 	<key>metaData</key>
-	<dict>
-		<key>application/controllers/chronicle.php</key>
-		<dict>
-			<key>caret</key>
-			<dict>
-				<key>column</key>
-				<integer>18</integer>
-				<key>line</key>
-				<integer>84</integer>
-			</dict>
-			<key>firstVisibleColumn</key>
-			<integer>0</integer>
-			<key>firstVisibleLine</key>
-			<integer>63</integer>
-		</dict>
-		<key>template.html</key>
-		<dict>
-			<key>caret</key>
-			<dict>
-				<key>column</key>
-				<integer>39</integer>
-				<key>line</key>
-				<integer>13</integer>
-			</dict>
-			<key>firstVisibleColumn</key>
-			<integer>0</integer>
-			<key>firstVisibleLine</key>
-			<integer>0</integer>
-		</dict>
-	</dict>
-	<key>openDocuments</key>
-	<array>
-		<string>template.html</string>
-		<string>application/controllers/chronicle.php</string>
-	</array>
+	<dict/>
 	<key>showFileHierarchyDrawer</key>
 	<true/>
 	<key>treeState</key>
@@ -94,22 +56,37 @@
 			<key>isExpanded</key>
 			<true/>
 			<key>subItems</key>
-			<dict/>
-		</dict>
-		<key>resources</key>
-		<dict>
-			<key>isExpanded</key>
-			<true/>
-			<key>subItems</key>
 			<dict>
-				<key>scripts</key>
+				<key>controllers</key>
 				<dict>
 					<key>isExpanded</key>
 					<true/>
 					<key>subItems</key>
 					<dict/>
 				</dict>
+				<key>views</key>
+				<dict>
+					<key>isExpanded</key>
+					<true/>
+					<key>subItems</key>
+					<dict>
+						<key>chronicle</key>
+						<dict>
+							<key>isExpanded</key>
+							<true/>
+							<key>subItems</key>
+							<dict/>
+						</dict>
+					</dict>
+				</dict>
 			</dict>
+		</dict>
+		<key>resources</key>
+		<dict>
+			<key>isExpanded</key>
+			<true/>
+			<key>subItems</key>
+			<dict/>
 		</dict>
 	</dict>
 	<key>windowFrame</key>

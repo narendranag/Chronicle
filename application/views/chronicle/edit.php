@@ -44,7 +44,7 @@
 
 	<div class="span-24 last chronicle alt">
 		Narendra Nag's Chronicle
-		<a href="#login" rel="facebox">Sign In</a>
+		<a href="<?=site_url("")?>">Home</a>
 	</div>
 
 	<div id="edit">
