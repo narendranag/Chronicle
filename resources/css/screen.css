@@ -402,9 +402,6 @@ a[href^="aim:"]   { background-image: url(/resources/icons/im.png); }
 
 -------------------------------------------------------------- */
 
-/* Indentation instead of line shifts for sibling paragraphs. */
-   p + p { text-indent:2em; margin-top:-1.5em; }
-   form p + p  { text-indent: 0; } /* Don't want this in forms. */
    
 
 /* For great looking type, use this code instead of asdf: 

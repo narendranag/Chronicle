@@ -40,7 +40,7 @@ class Chronicle extends Controller {
 	}
 	
 	
-	function edit($url = NULL)
+	function edit($id)
 	{
 		$this->load->helper('form');
 		
@@ -49,8 +49,11 @@ class Chronicle extends Controller {
 			redirect("auth/login");
 		}
 		
-		if(isset($url))
-			$data = $this->_get($url);
+		if(isset($id))
+		{
+			$postObject = new Post($id);
+			$data = $postObject->to_array();
+		}
 		else
 		{
 			$data["id"] = 0;
@@ -150,7 +153,7 @@ class Chronicle extends Controller {
 		
 		// Unique SEO Friendly URL
 		
-		if($id == 0)
+		if(($postObject->status < $this->_PUBLISHED && $this->input->post("status") == $this->_PUBLISHED) OR strlen($postObject->url) == 0)
 		{
 			$base_url = url_title(strtolower($postObject->title));
 			$url = $base_url;
@@ -164,8 +167,6 @@ class Chronicle extends Controller {
 
 			$postObject->url = $url;
 		}
-		else
-			$postObject->url = url_title($this->input->post("url"));
 		
 		// Category
 		
