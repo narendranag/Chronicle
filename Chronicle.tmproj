@@ -16,12 +16,6 @@
 		</dict>
 		<dict>
 			<key>filename</key>
-			<string>template.html</string>
-			<key>lastUsed</key>
-			<date>2010-01-25T05:19:34Z</date>
-		</dict>
-		<dict>
-			<key>filename</key>
 			<string>index.php</string>
 			<key>lastUsed</key>
 			<date>2010-01-23T19:28:03Z</date>
@@ -42,6 +36,12 @@
 			<key>lastUsed</key>
 			<date>2010-01-21T19:59:32Z</date>
 		</dict>
+		<dict>
+			<key>filename</key>
+			<string>template.html</string>
+			<key>lastUsed</key>
+			<date>2010-01-25T05:19:34Z</date>
+		</dict>
 	</array>
 	<key>fileHierarchyDrawerWidth</key>
 	<integer>231</integer>
@@ -56,37 +56,22 @@
 			<key>isExpanded</key>
 			<true/>
 			<key>subItems</key>
-			<dict>
-				<key>controllers</key>
-				<dict>
-					<key>isExpanded</key>
-					<true/>
-					<key>subItems</key>
-					<dict/>
-				</dict>
-				<key>views</key>
-				<dict>
-					<key>isExpanded</key>
-					<true/>
-					<key>subItems</key>
-					<dict>
-						<key>chronicle</key>
-						<dict>
-							<key>isExpanded</key>
-							<true/>
-							<key>subItems</key>
-							<dict/>
-						</dict>
-					</dict>
-				</dict>
-			</dict>
+			<dict/>
 		</dict>
 		<key>resources</key>
 		<dict>
 			<key>isExpanded</key>
 			<true/>
 			<key>subItems</key>
-			<dict/>
+			<dict>
+				<key>css</key>
+				<dict>
+					<key>isExpanded</key>
+					<true/>
+					<key>subItems</key>
+					<dict/>
+				</dict>
+			</dict>
 		</dict>
 	</dict>
 	<key>windowFrame</key>

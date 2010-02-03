@@ -43,8 +43,15 @@
 
 			<h2><a href="<?=site_url('chronicle/view/' . $post['url'])?>"><?=$post["title"]?></a></h2>
 
-			<author><?=$post["author"]?></author>
+			<author><?=$post["author"]?>
+			
+			<?
+			if($this->dx_auth->is_logged_in())
+				echo anchor("chronicle/edit/" . $post["id"], "Edit");
+			?>
 
+			</author>
+			
 			<extract>
 				<?=$post["body"]?>
 			</extract>

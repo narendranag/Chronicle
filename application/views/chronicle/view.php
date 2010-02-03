@@ -39,7 +39,14 @@
 
 
 
-			<author><?=$author?></author>
+			<author><?=$author?>
+			
+			<?
+			if($this->dx_auth->is_logged_in())
+				echo anchor("chronicle/edit/" . $id, "Edit");
+			?>
+
+			</author>
 
 			<post>
 				<?=$body?>
